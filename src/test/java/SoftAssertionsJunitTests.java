@@ -26,7 +26,7 @@ public class SoftAssertionsJunitTests {
     void softAssertionsShouldBeJuinit(){
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
-        $(".Layout-main").find(byText("Soft assertions")).shouldBe(visible).click();
+        $(".markdown-body").find(byText("Soft assertions")).shouldBe(visible).click();
         $$("div.markdown-heading").findBy(text("JUnit5")).sibling(0)
                 .shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
 
